@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> subTitleText = new ArrayList<>();
     private ArrayList<Integer> image = new ArrayList<>();
 
+    private RecyclerAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,5 +46,9 @@ public class MainActivity extends AppCompatActivity {
         image.add(R.drawable.cat_im_4);
         image.add(R.drawable.cat_im_5);
         image.add(R.drawable.cat_im_6);
+
+        adapter = new RecyclerAdapter(titleText, subTitleText, image, MainActivity.this);
+
+        recyclerView.setAdapter(adapter);
     }
 }

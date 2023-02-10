@@ -1,5 +1,6 @@
 package com.diam.recycler_view_1;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +16,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.CatVie
     private ArrayList<String> titleText;
     private ArrayList<String> subTitleText;
     private ArrayList<Integer> image;
+    private Context context;
 
-    public RecyclerAdapter(ArrayList<String> titleText, ArrayList<String> subTitleText, ArrayList<Integer> image) {
+    public RecyclerAdapter(ArrayList<String> titleText, ArrayList<String> subTitleText, ArrayList<Integer> image, Context context) {
         this.titleText = titleText;
         this.subTitleText = subTitleText;
         this.image = image;
+        this.context = context;
     }
 
     @NonNull
